@@ -15,4 +15,8 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  base: "/", // <-- ensures correct path when deployed
+  build: {
+    outDir: "dist", // <-- default, but explicitly defining
+  },
 }));
